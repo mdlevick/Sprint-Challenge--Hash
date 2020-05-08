@@ -1,8 +1,13 @@
 def has_negatives(a):
 
-    """
-    YOUR CODE HERE
-    """
+    hash = {}
+    result = []
+
+    for i in a:
+        if i != 0:
+            hash[i] = True
+            if hash.get(-i, None) is not None:
+                result.append(abs(i))
 
     return result
 

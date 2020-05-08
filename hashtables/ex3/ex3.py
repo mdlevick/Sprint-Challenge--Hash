@@ -1,8 +1,14 @@
 def intersection(arrays):
 
-    """
-    YOUR CODE HERE
-    """
+    hash = {}
+
+    for a in arrays:
+        for i in a:
+            if hash.get(i, None) is None:
+                hash[i] = 0
+            hash[i] += 1
+
+    result = [ i for i, n in hash.items() if n == len(arrays) ]
 
     return result
 
